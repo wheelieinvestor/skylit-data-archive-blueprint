@@ -1,0 +1,34 @@
+{
+  "purpose": "Fill an ignored operator.local.json before implementation; no secrets here.",
+  "implementation_repository": "",
+  "implementation_directory": "",
+  "data_directory": "",
+  "railway_project": "",
+  "railway_environment": "research",
+  "monthly_railway_cap_usd": 150,
+  "aggregate_local_working_gib": 10,
+  "local_min_free_gib": 40,
+  "historical_cutoff": "",
+  "collection_scope": "Full supported provider catalog; broad daily coverage first",
+  "existing_collectors_to_import": [],
+  "provider_limits": {
+    "requests_per_minute": null,
+    "historical_in_flight": null,
+    "stream_symbols": null,
+    "monthly_credit_allowance": null
+  },
+  "authority": {
+    "implementation": false,
+    "provision_selected_research_resources": false,
+    "deploy_selected_research_resources": false,
+    "activate_collection": false
+  },
+  "credential_environment_names": [
+    "SKYLIT_API_KEY",
+    "ARCHIVE_WORKER_TOKEN",
+    "ARCHIVE_DATABASE_URL"
+  ],
+  "research_only": true,
+  "collection_enabled": false,
+  "collection_start_confirmation": null
+}

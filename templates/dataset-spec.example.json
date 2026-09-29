@@ -1,0 +1,33 @@
+{
+  "template_only": true,
+  "dataset_id": "skylit.atlas.ohlcv.v1",
+  "owner": "01-atlas",
+  "family": "atlas",
+  "source_service": "atlas",
+  "source_route": "/v1/history",
+  "schema_major": 1,
+  "fields_to_map": [
+    "timestamp",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "buy_volume",
+    "sell_volume",
+    "unknown_volume"
+  ],
+  "mapping_status": "Implement from current provider schema; do not assume response field names match normalized names.",
+  "logical_partition_keys": [
+    "instrument_id",
+    "session",
+    "resolution",
+    "session_scope",
+    "revision"
+  ],
+  "historical_policy": "Probe actual boundaries for each instrument and resolution.",
+  "missingness_policy": "Distinguish absent, null and zero.",
+  "raw_retention": "lossless compressed source with safe request metadata",
+  "normalized_format": "parquet",
+  "publication_schema": "publication.schema.json"
+}

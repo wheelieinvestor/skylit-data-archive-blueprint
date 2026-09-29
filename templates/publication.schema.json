@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/archive/publication.schema.json",
+  "title": "Publication metadata contract - reference design",
+  "description": "No observations are included. An implementation must additionally validate hashes, ownership, references and coverage against stored objects.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "publication_id",
+    "dataset_id",
+    "acquisition_key",
+    "universe_version",
+    "schema_version",
+    "parser_version",
+    "code_commit",
+    "dependency_lock_sha256",
+    "published_at",
+    "provenance",
+    "raw_objects",
+    "curated_objects",
+    "coverage"
+  ],
+  "properties": {
+    "publication_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acquisition_key": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "universe_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parser_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code_commit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dependency_lock_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "provider",
+        "service",
+        "route",
+        "safe_request_parameters",
+        "requested_at",
+        "source_at",
+        "ingested_at"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "service": {
+          "type": "string",
+          "minLength": 1
+        },
+        "route": {
+          "type": "string",
+          "minLength": 1
+        },
+        "safe_request_parameters": {
+          "type": "object"
+        },
+        "requested_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "ingested_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "raw_objects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/object_reference"
+      }
+    },
+    "curated_objects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/object_reference"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "status",
+        "requested_start",
+        "requested_end",
+        "observed_start",
+        "observed_end",
+        "findings"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "published",
+            "partial",
+            "empty"
+          ]
+        },
+        "requested_start": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requested_end": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_start": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_end": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "$defs": {
+    "object_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bucket_role",
+        "key",
+        "sha256",
+        "bytes"
+      ],
+      "properties": {
+        "bucket_role": {
+          "enum": [
+            "raw",
+            "curated",
+            "results"
+          ]
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

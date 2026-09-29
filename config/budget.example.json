@@ -1,0 +1,31 @@
+{
+  "kind": "planning_example_not_enforced_runtime_config",
+  "pricing_checked_on": "2026-09-29",
+  "currency": "USD",
+  "monthly_cap": 150,
+  "envelopes": {
+    "storage": 60,
+    "operations_and_volumes": 35,
+    "service_egress": 20,
+    "reserve": 35
+  },
+  "rates": {
+    "bucket_gb_month": 0.015,
+    "service_egress_gb": 0.05,
+    "container_ram_gb_month": 10,
+    "container_vcpu_month": 20,
+    "volume_gb_month": 0.15
+  },
+  "storage_units": "decimal GB; local working-space limits use GiB",
+  "aggregate_local_working_gib": 10,
+  "excluded_costs": [
+    "Skylit access",
+    "coding-agent tools",
+    "local hardware and internet",
+    "taxes"
+  ],
+  "sources": [
+    "https://docs.railway.com/storage-buckets/billing",
+    "https://docs.railway.com/pricing/plans"
+  ]
+}

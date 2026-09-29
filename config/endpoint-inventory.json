@@ -1,0 +1,474 @@
+{
+  "kind": "route_metadata_only",
+  "observed_on": "2026-09-29",
+  "note": "Dated inventory, not an entitlement or completeness guarantee. Refresh specifications before implementation.",
+  "hosts": {
+    "heat": "https://api.skylit.ai",
+    "flow": "https://flow-api.skylit.ai",
+    "atlas": "https://atlas-api.skylit.ai"
+  },
+  "operations": [
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/account",
+      "owner": "00-platform"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/gex/levels",
+      "owner": "06-heat"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/heatmap",
+      "owner": "06-heat"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/historical",
+      "owner": "06-heat"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/historical/range",
+      "owner": "06-heat"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/openapi.json",
+      "owner": "00-platform"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/stats/daily",
+      "owner": "06-heat"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/stream",
+      "owner": "06-heat"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/symbols",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/cones",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/derived",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/events",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/history",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/iv",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/market",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/screener",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/sigma",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/snapshot",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/status",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/stream",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/surface",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/symbols",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/term",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "heat",
+      "method": "GET",
+      "path": "/v1/vol/tilt",
+      "owner": "07-tempest"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/aggregate/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/chain-bull-bear/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/chain-ratio/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract-bull-bear/{symbol}",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract-ratio/{symbol}",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/bulk/stats",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/top/daily",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/top/weekly",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/unusual-oi",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/unusual-volume",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/{symbol}/chart",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/{symbol}/history",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/{symbol}/rvol",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/{symbol}/stats",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/contract/{symbol}/trades",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/dark-pool/top-prints/{ticker}",
+      "owner": "05-dark-pool"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/dark-pool/trades",
+      "owner": "05-dark-pool"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/market-breadth",
+      "owner": "04-market"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/sector/{sector}",
+      "owner": "04-market"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}/aggregate",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}/baseline",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}/historical-compare",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}/momentum",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}/strikes",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/flow/{ticker}/tide",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/market/overview",
+      "owner": "04-market"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/market/tide",
+      "owner": "04-market"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/moneyness/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/openapi.json",
+      "owner": "00-platform"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/score/{trade_id}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/sweeps/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/bulk/stats",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/search",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/top/daily",
+      "owner": "04-market"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/top/weekly",
+      "owner": "04-market"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/by-strike",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/by-strike/{strike}/expirations",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/chain",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/chart",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/expirations",
+      "owner": "03-contracts"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/history",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/rvol",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/stats",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/underlying/{ticker}/trades",
+      "owner": "02-flow"
+    },
+    {
+      "service": "flow",
+      "method": "GET",
+      "path": "/v1/vol-oi/{ticker}",
+      "owner": "02-flow"
+    },
+    {
+      "service": "atlas",
+      "method": "GET",
+      "path": "/v1/config",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "atlas",
+      "method": "GET",
+      "path": "/v1/history",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "atlas",
+      "method": "GET",
+      "path": "/v1/openapi.json",
+      "owner": "00-platform"
+    },
+    {
+      "service": "atlas",
+      "method": "GET",
+      "path": "/v1/search",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "atlas",
+      "method": "GET",
+      "path": "/v1/symbols",
+      "owner": "01-atlas"
+    },
+    {
+      "service": "atlas",
+      "method": "GET",
+      "path": "/v1/time",
+      "owner": "01-atlas"
+    }
+  ]
+}

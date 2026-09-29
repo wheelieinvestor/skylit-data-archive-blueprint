@@ -1,0 +1,20 @@
+{
+  "template_only": true,
+  "role": "",
+  "implementation_commit": "",
+  "contract_version": "",
+  "dataset_ids": [],
+  "field_inventory_path": "",
+  "job_plan_ids": [],
+  "initial_historical_cutoff": "",
+  "release_manifest_references": [],
+  "implemented": false,
+  "deployed": false,
+  "activated": false,
+  "fresh_publication_verified": false,
+  "admitted_jobs_remaining": null,
+  "gaps": [],
+  "integration_requirements": [],
+  "validation_evidence": [],
+  "recovery_documentation": ""
+}

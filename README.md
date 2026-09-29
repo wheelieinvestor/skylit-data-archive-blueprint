@@ -41,7 +41,7 @@ The default is **architecture-only with provider access disabled**. Build the so
 
 ## Start here
 
-1. Read [what exists versus what is being built](docs/status.md).
+1. Read [implementation status and what this repository includes](docs/status.md).
 2. Follow [Build your own](docs/build-your-own.md) to choose your account, storage, budget, and implementation workspace.
 3. Read the [architecture](docs/architecture.md), [data organization](docs/data-model.md), and [collection lifecycle](docs/collection-workflow.md).
 4. Review the [dataset families and endpoint inventory](docs/datasets.md).

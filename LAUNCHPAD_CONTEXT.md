@@ -4,7 +4,7 @@ Version 1, September 29, 2026.
 
 The purpose of this repository is to explain a Skylit data-collection architecture and give readers portable instructions and agent prompts to implement it independently. The author has authorized publication of this guide without collected data or private deployment details.
 
-The underlying research system began with local collectors, immutable object storage, and a private dashboard. A shared distributed coordinator and expanded collectors are under active development. This repository publishes a design and implementation guide, not that private runtime or evidence that its full target architecture is deployed. See docs/status.md.
+The underlying research system began with local collectors, immutable object storage, and a private dashboard. The shared distributed coordinator, seven data-family adapters and dashboard have since reached a verified architecture-only deployment with collection disabled. This repository publishes the design and implementation guide, not that private runtime or collected data. Source-dependent live acceptance remains pending. See docs/status.md for the dated milestone.
 
 The reference topology uses one Railway project, one research environment, three private buckets, a small Postgres metadata database, a coordinator, a shared ongoing worker, and a private dashboard. Local bulk workers use the same shared queue and upload directly to object storage.
 
